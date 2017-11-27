@@ -30,22 +30,26 @@ switch(netModelIdx)
                         imageInputLayer([numRows, numCols, numChannels])
     
                         % (Kernel Size, Num Filters)
-                        convolution2dLayer(5, 16, 'Padding', 0)
-                        batchNormalizationLayer()
+                        convolution2dLayer(5, 50, 'Padding', 0)
                         maxPooling2dLayer(2, 'Stride', 2)
-                        leakyReluLayer()
-
-                        convolution2dLayer(3, 32, 'Padding', 0)
+                        reluLayer()
                         batchNormalizationLayer()
+
+                        convolution2dLayer(3, 40, 'Padding', 1)
                         maxPooling2dLayer(2, 'Stride', 2)
-                        leakyReluLayer()
-
-                        convolution2dLayer(3, 64, 'Padding', 1)
+                        reluLayer()
                         batchNormalizationLayer()
-                        leakyReluLayer()
 
-                        fullyConnectedLayer(64)
+                        convolution2dLayer(3, 30, 'Padding', 1)
+                        reluLayer()
+                        batchNormalizationLayer()
+
+                        fullyConnectedLayer(48)
                         leakyReluLayer()
+                        dropoutLayer(0.1)
+                        fullyConnectedLayer(32)
+                        leakyReluLayer()
+                        dropoutLayer(0.1)
                         fullyConnectedLayer(10)
                         softmaxLayer()
                         classificationLayer()];
