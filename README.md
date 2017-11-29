@@ -31,6 +31,7 @@ This is basically the MNIST Data Set.
  * [Chris Taylor - Digit Recognizer Kaggle](https://github.com/chris-taylor/digit-recognition).
  * [aswin89thee - Digit Recognizer Kaggle](https://github.com/aswin89thee/DigitRecognizer).
  * [etticat - Digit Recognizer Kaggle](https://github.com/etticat/kaggle-digit-recognizer).
+ * [How Far Can We Go with MNIST](https://github.com/hwalsuklee/how-far-can-we-go-with-MNIST)?
 
  [01]: https://www.kaggle.com/c/digit-recognizer
 
