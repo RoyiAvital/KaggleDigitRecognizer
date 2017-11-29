@@ -1,5 +1,12 @@
 % Digit Recognizer Trainer
 % Trains a net for Digit Recognition.
+% References:
+%   1.  Create Simple Deep Learning Network for Classification - https://www.mathworks.com/help/nnet/examples/create-simple-deep-learning-network-for-classification.html.
+%   2.  'trainNetwork' - https://www.mathworks.com/help/nnet/ref/trainnetwork.html.
+%   3.  'trainingOptions' - https://www.mathworks.com/help/nnet/ref/trainingoptions.html.
+%   4.  'augmentedImageSource' - https://www.mathworks.com/help/nnet/ref/augmentedimagesource.html.
+%   5.  'imageDataAugmenter' - https://www.mathworks.com/help/nnet/ref/imagedataaugmenter.html.
+%   6.  Neural Network Toolbox Functions - https://www.mathworks.com/help/nnet/functionlist.html.
 % Remarks:
 %   1.  sa
 % TODO:

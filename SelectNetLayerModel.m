@@ -6,22 +6,28 @@ switch(netModelIdx)
     case(1)
         hNetModel = [
                         imageInputLayer([numRows, numCols, numChannels])
-    
+                        
+                        % Input is [28 x 28 x 1]
+                        batchNormalizationLayer()
                         % (Kernel Size, Num Filters)
-                        convolution2dLayer(3, 16, 'Padding', 1)
-                        batchNormalizationLayer()
+                        convolution2dLayer(5, 16, 'Padding', 0)
                         maxPooling2dLayer(2, 'Stride', 2)
-                        reluLayer()
+                        leakyReluLayer()
 
-                        convolution2dLayer(3, 32, 'Padding', 1)
+                        % Input is [12 x 12 x 16]
                         batchNormalizationLayer()
+                        convolution2dLayer(3, 32, 'Padding', 0)
                         maxPooling2dLayer(2, 'Stride', 2)
-                        reluLayer()
+                        leakyReluLayer()
 
-                        convolution2dLayer(3, 64, 'Padding', 1)
+                        % Input is [5 x 5 x 32]
                         batchNormalizationLayer()
-                        reluLayer()
+                        convolution2dLayer(3, 64, 'Padding', 0)
+                        leakyReluLayer()
 
+                        % Input is [5 x 5 x 64]
+                        fullyConnectedLayer(64)
+                        leakyReluLayer()
                         fullyConnectedLayer(10)
                         softmaxLayer()
                         classificationLayer()];
@@ -68,6 +74,41 @@ switch(netModelIdx)
                         batchNormalizationLayer()
                         leakyReluLayer()
 
+                        fullyConnectedLayer(10)
+                        softmaxLayer()
+                        classificationLayer()];
+    case(4)
+        hNetModel = [
+                        imageInputLayer([numRows, numCols, numChannels])
+                        
+                        % Input is [28 x 28 x 1]
+                        batchNormalizationLayer()
+                        % (Kernel Size, Num Filters)
+                        convolution2dLayer(5, 16, 'Padding', 0)
+                        maxPooling2dLayer(2, 'Stride', 2)
+                        leakyReluLayer()
+
+                        % Input is [12 x 12 x 16]
+                        batchNormalizationLayer()
+                        convolution2dLayer(3, 32, 'Padding', 0)
+                        maxPooling2dLayer(2, 'Stride', 2)
+                        leakyReluLayer()
+
+                        % Input is [5 x 5 x 32]
+                        batchNormalizationLayer()
+                        convolution2dLayer(3, 64, 'Padding', 0)
+                        leakyReluLayer()
+                        
+                        % Input is [3 x 3 x 64]
+                        batchNormalizationLayer()
+                        convolution2dLayer(3, 64, 'Padding', 0)
+                        leakyReluLayer()
+
+                        % Input is [3 x 3 x 64]
+                        fullyConnectedLayer(128)
+                        reluLayer()
+%                         fullyConnectedLayer(32)
+%                         reluLayer()
                         fullyConnectedLayer(10)
                         softmaxLayer()
                         classificationLayer()];
