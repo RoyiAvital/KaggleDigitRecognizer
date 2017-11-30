@@ -8,7 +8,8 @@
 %   5.  'imageDataAugmenter' - https://www.mathworks.com/help/nnet/ref/imagedataaugmenter.html.
 %   6.  Neural Network Toolbox Functions - https://www.mathworks.com/help/nnet/functionlist.html.
 % Remarks:
-%   1.  sa
+%   1.  See https://github.com/RoyiAvital/KaggleDigitRecognizer/commit/c498c7cbb9e993600e52a9095da23eae7644f381
+%       for 99.3% success rate.
 % TODO:
 % 	1.  ds
 % Release Notes
